@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-cookies",
-  "description": "Cordova Cookies Plugin",
+  "name": "cordova-plugin-cookie",
+  "description": "Cordova Cookie Plugin",
   "version": "1.0.2",
   "cordova": {
-    "id": "cordova-plugin-cookies",
+    "id": "cordova-plugin-cookie",
     "platforms": [
       "android",
       "ios"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kefelan/cordova-plugin-cookies.git"
+    "url": "git+https://github.com/kefelan/cordova-plugin-cookie.git"
   },
   "keywords": [
     "cordova",
