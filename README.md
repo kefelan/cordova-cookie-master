@@ -1,9 +1,3 @@
-Change Log
-=============
-
-V1.0.2
-Remove the import directive to fix the outdated dependency and compilation error caused by Apache cookie class.
-
 Cordova Cookie Plugin
 =====================
 
@@ -20,6 +14,7 @@ Install with Cordova CLI
     $ cordova plugin add git+https://github.com/kefelan/cordova-plugin-cookie.git
 
 ## Usage
+
 ### Get cookie value
 ```javascript
 cookieMaster.getCookieValue('http://<some host>:<some port>', '<cookie name>', function(data) {
@@ -30,6 +25,7 @@ cookieMaster.getCookieValue('http://<some host>:<some port>', '<cookie name>', f
   }
 });
 ```
+
 ### Set cookie value
 ```javascript
 cookieMaster.setCookieValue('http://<some host>:<some port>', '<cookie name>', '<cookie value>',
@@ -56,6 +52,8 @@ cookieMaster.clearCookies(
 ## Limitations
 * This version has been tested on Android 4.4 ~ 8.0 devices, iOS 7.1 ~ 11.2 devices. Experience may vary for different OS versions.
 
+## Change Log
+1.0.2 | Remove the import directive to fix the outdated dependency and compilation error caused by Apache cookie class.
 
 ## License
 This plugin is distributed under the MIT License.
