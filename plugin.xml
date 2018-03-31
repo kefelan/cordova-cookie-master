@@ -2,7 +2,7 @@
  
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-cookies"
+    id="cordova-plugin-cookie"
     version="1.0.2">
  
     <name>CookieMaster</name>
@@ -22,7 +22,7 @@
     <!-- android -->
     <platform name="android">
      
-        <source-file src="src/android/CookieMaster.java" target-dir="src/org/apache/cordova/cookies" />
+        <source-file src="src/android/CookieMaster.java" target-dir="src/org/apache/cordova/cookie" />
      
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET" />
@@ -30,7 +30,7 @@
         </config-file>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="CookieMaster">
-                <param name="android-package" value="org.apache.cordova.cookies.CookieMaster"/>
+                <param name="android-package" value="org.apache.cordova.cookie.CookieMaster"/>
             </feature>
         </config-file>
     
