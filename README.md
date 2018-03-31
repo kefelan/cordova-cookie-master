@@ -4,8 +4,8 @@ Change Log
 V1.0.2
 Remove the import directive to fix the outdated dependency and compilation error caused by Apache cookie class.
 
-Cookie Master
-==============
+Cordova Cookies Plugin
+======================
 
 As you may already know, WebViews on Android and iOS platforms do not support regular use of <code>document.cookie</code> for managing the cookies in your app. This plugin allows you to get and set cookie values from your WebView through a simple interface.
 
@@ -17,7 +17,7 @@ As you may already know, WebViews on Android and iOS platforms do not support re
 
 Install with Cordova CLI
 
-    $ cordova plugin add cordova-plugin-cookiemaster
+    $ cordova plugin add https://github.com/kefelan/cordova-plugin-cookies.git
 
 ## Usage
 ### Get cookie value
