@@ -2,14 +2,14 @@
  
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-cookiemaster"
+    id="cordova-plugin-cookies"
     version="1.0.2">
  
     <name>CookieMaster</name>
     <description>Enables access to document.cookie in iOS and Android WebViews.</description>
     <license>MIT</license>
 
-    <keywords>cordova,phonegap,cookie,cookies,cookie-manager,cookie-plugin</keywords>
+    <keywords>cordova,phonegap,cookie,cookies,cookiemaster</keywords>
 
     <engines>
         <engine name="cordova" version=">=3.0.0" />
@@ -22,7 +22,7 @@
     <!-- android -->
     <platform name="android">
      
-        <source-file src="src/android/CookieMaster.java" target-dir="src/org/apache/cordova/cookiemaster" />
+        <source-file src="src/android/CookieMaster.java" target-dir="src/org/apache/cordova/cookies" />
      
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET" />
@@ -30,7 +30,7 @@
         </config-file>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="CookieMaster">
-                <param name="android-package" value="org.apache.cordova.cookiemaster.CookieMaster"/>
+                <param name="android-package" value="org.apache.cordova.cookies.CookieMaster"/>
             </feature>
         </config-file>
     
