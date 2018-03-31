@@ -1,7 +1,7 @@
 {
-  "name": "cordova-plugin-cookies",
-  "version": "1.0.2",
+  "name": "cordova-plugin-cookiemaster",
   "description": "Cordova Cookies Plugin",
+  "version": "1.0.2",
   "cordova": {
     "id": "cordova-plugin-cookiemaster",
     "platforms": [
