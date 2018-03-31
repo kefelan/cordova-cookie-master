@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
  
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-           id="cordova-plugin-cookiemaster"
-      version="1.0.2">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-cookiemaster"
+    version="1.0.2">
+ 
     <name>CookieMaster</name>
-    <description>This plugin enables the management of cookies in WebViews on iOS and Android as those platforms restrict the use of "document.cookie".</description>
+    <description>Enables access to document.cookie in iOS and Android WebViews.</description>
     <license>MIT</license>
 
     <keywords>cordova,phonegap,cookie,cookies,cookie-manager,cookie-plugin</keywords>
@@ -16,30 +18,35 @@
     <js-module src="www/cookieMaster.js" name="cookieMaster">
         <clobbers target="cookieMaster" />
     </js-module>
-    
-    <!-- ios -->
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="CookieMaster">
-                <param name="ios-package" value="CDVCookieMaster"/>
-            </feature>
-        </config-file>
-        <header-file src="src/ios/CDVCookieMaster.h" />
-        <source-file src="src/ios/CDVCookieMaster.m" />                      
-    </platform>
-    
+
     <!-- android -->
     <platform name="android">
+     
+        <source-file src="src/android/CookieMaster.java" target-dir="src/org/apache/cordova/cookiemaster" />
+     
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         </config-file>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="CookieMaster">
-                <param name="android-package" value="com.cordova.plugins.cookiemaster.CookieMaster"/>
+                <param name="android-package" value="org.apache.cordova.cookiemaster.CookieMaster"/>
             </feature>
         </config-file>
- 
-        <source-file src="src/android/com/cordova/plugins/cookiemaster/CookieMaster.java" target-dir="src/com/cordova/plugins/cookiemaster" />      
+    
     </platform>          
+
+    <!-- ios -->
+    <platform name="ios">
+        
+        <config-file target="config.xml" parent="/*">
+            <feature name="CookieMaster">
+                <param name="ios-package" value="CDVCookieMaster"/>
+            </feature>
+        </config-file>
+     
+        <header-file src="src/ios/CDVCookieMaster.h" />
+        <source-file src="src/ios/CDVCookieMaster.m" />
+        
+    </platform>
 </plugin>
