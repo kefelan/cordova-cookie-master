@@ -18,7 +18,9 @@
     "phonegap",
     "cordova-android",
     "cordova-ios",
-    "cookies"
+    "cookie",
+    "cookies",
+    "cookiemaster"
   ],
   "engines": [
     {
